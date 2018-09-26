@@ -230,3 +230,42 @@ th {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "sans-serif", "Times new roman", "arial";
+  background-color: green;
+}
+
+h1 {
+  color: red;
+  font-family: "sans-serif", "Times new roman", "arial";
+}
+
+p {
+  color: red;
+  margin: 0;
+}
+
+ul li a {
+  background-color: red;
+}
+
+ul li div {
+  background-color: red;
+}
+
+.btn.btn-secondary {
+  background-color: yellow;
+}
+
+.btn-primary .btn.btn-primary {
+  background-color: red;
+}
+
+.btn-primary .btn.btn-primary.btn {
+  background-color: red;
+}
+
+.btn.btn-secondary {
+  background-color: yellow;
+}

@@ -1,0 +1,43 @@
+body {
+	font-family: $base-font;
+	background-color: green;
+}
+
+h1 {
+	color: $red;
+	font-family: $base-font;
+}
+
+p {
+	color: $red;
+	margin: 0;
+}
+
+ul li a {
+	background-color: $red;
+}
+
+ul li div {
+	background-color: $red;
+}
+
+.btn.btn-primary {
+			
+}
+
+.btn.btn-secondary {
+	background-color: $yellow;
+}
+
+.btn {
+	 .btn-primary &.btn-primary {
+		background-color: $red;
+
+		&.btn {
+			background-color: $red;
+		}
+	}
+	&.btn-secondary {
+		background-color: $yellow;
+	}
+}
