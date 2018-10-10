@@ -1,6 +1,41 @@
 
 
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?baekk8");
+  src: url("fonts/icomoon.eot?baekk8#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?baekk8") format("truetype"), url("fonts/icomoon.woff?baekk8") format("woff"), url("fonts/icomoon.svg?baekk8#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e900";
+}
+
+.icon-facebook:before {
+  content: "\e905";
+}
+
+.icon-instagram:before {
+  content: "\e901";
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -67,14 +102,22 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 mark {
   background: #ff0;
   color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
 }
 
 small {
@@ -99,6 +142,10 @@ sub {
 
 img {
   border: 0;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
 }
 
 svg:not(:root) {
@@ -232,7 +279,23 @@ th {
   box-sizing: border-box;
 }
 
-header {
+ul,
+ol {
+  margin: 0;
+  padding-left: 15px;
+}
+
+blockquote {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+q:before,
+q:after {
+  display: none;
+}
+
+.header {
   padding: 60px 0 50px;
 }
 
@@ -253,7 +316,7 @@ header {
   padding: 0;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Times New Roman", monospace;
+  font-family: Arial;
 }
 
 .nav li {
@@ -266,11 +329,39 @@ header {
   text-decoration: none;
 }
 
+.footer {
+  margin-top: 95px;
+  background-color: #f0f0f0;
+  text-align: right;
+  padding: 30px 0 50px 0;
+}
+
+.socials {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -8px;
+}
+
+.socials li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 8px;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials-title {
+  text-transform: capitalize;
+}
+
 body {
-  font-family: "ABeeZee", sans-serif;
+  font-family: Georgia;
   font-size: 14px;
   line-height: 1.7;
   min-width: 320px;
+  color: #626262;
 }
 
 #wrapper {
@@ -295,6 +386,7 @@ a:hover {
 
 h1 {
   font-size: 36px;
+  font-family: "Times New Roman", monospace;
 }
 
 h2 {
@@ -307,4 +399,101 @@ h3 {
 
 h4 {
   font-size: 18px;
+}
+
+.photodiary img {
+  width: 100%;
+}
+
+.photodiary .img-holder {
+  margin-bottom: 50px;
+}
+
+.secondary-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #b4ad9e;
+  font-family: Arial;
+}
+
+.secondary-link:hover {
+  color: #ea1313;
+}
+
+.common-section {
+  margin-bottom: 20px;
+}
+
+.common-section h2,
+.common-section h3,
+.common-section h4 {
+  margin-bottom: 30px;
+}
+
+.content-wrap {
+  max-width: 900px;
+  counter-reset: anotherReset;
+}
+
+.round-numbers-list {
+  list-style: none;
+  counter-reset: customCounter;
+  padding-left: 40px;
+}
+
+.round-numbers-list li {
+  counter-increment: customCounter;
+  position: relative;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.round-numbers-list li:before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ea1313;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  content: counter(customCounter);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.done-list {
+  list-style: none;
+  padding-left: 40px;
+}
+
+.done-list li {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.done-list li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+  left: -40px;
+  width: 30px;
+  height: 15px;
+  border: 2px solid green;
+  border-top-color: transparent;
+  border-right-color: transparent;
 }

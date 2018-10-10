@@ -46,14 +46,17 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 mark {
   background: #ff0;
   color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
 }
 
 small {
@@ -77,6 +80,10 @@ sub {
 
 img {
   border: 0;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
 }
 
 svg:not(:root) {
@@ -185,4 +192,22 @@ td,th {
 
 *:before,*:after {
   box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 15px;
+}
+
+blockquote {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+q {
+
+  &:before,
+  &:after {
+    display: none;
+  }
 }
