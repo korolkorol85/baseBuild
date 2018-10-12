@@ -474,6 +474,36 @@ h4 {
   font-weight: bolder;
 }
 
+.facebook-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.facebook-list li:before {
+  font-family: 'icomoon' !important;
+  content: "\e905";
+  margin-right: 10px;
+}
+
+.guitar-list {
+  list-style: none;
+  padding-left: 40px;
+}
+
+.guitar-list li {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.guitar-list .bullit {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -40px;
+  width: 30px;
+}
+
 .done-list {
   list-style: none;
   padding-left: 40px;
@@ -484,16 +514,37 @@ h4 {
   margin-bottom: 15px;
 }
 
-.done-list li:before {
+.done-list li:before,
+.done-list li:after {
   content: "";
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-45deg);
-  transform: translateY(-50%) rotate(-45deg);
-  left: -40px;
-  width: 30px;
-  height: 15px;
-  border: 2px solid green;
-  border-top-color: transparent;
-  border-right-color: transparent;
+  left: -31px;
+  -webkit-transition: .3s border-color;
+  transition: .3s border-color;
+}
+
+.done-list li:before {
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid blue;
+}
+
+.done-list li:after {
+  border-top: 10px solid transparent;
+  border-left: 20px solid yellow;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.done-list li:hover:before {
+  border-left-color: yellow;
+}
+
+.done-list li:hover:after {
+  border-left-color: blue;
+}
+
+.bordered {
+  border: 30px solid;
+  border-color: transparent red transparent blue;
 }

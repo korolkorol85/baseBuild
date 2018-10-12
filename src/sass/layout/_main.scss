@@ -81,6 +81,7 @@ h4 {
 	list-style: none;
 	counter-reset: customCounter;
 	padding-left: 40px;
+	
 
 	li {
 		counter-increment: customCounter;
@@ -109,6 +110,38 @@ h4 {
 	}
 }
 
+.facebook-list {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+
+		&:before {
+			font-family: 'icomoon' !important;
+			content: "\e905";
+			margin-right: 10px;
+		}
+	}
+}
+
+.guitar-list {
+	list-style: none;
+	padding-left: 40px;
+
+	li {
+		position: relative;
+		margin-bottom: 15px;
+	}
+
+	.bullit {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -40px;
+		width: 30px;
+	}
+}
+
 
 .done-list {
 	list-style: none;
@@ -118,18 +151,40 @@ h4 {
 		position: relative;
 		margin-bottom: 15px;
 
-		&:before {
+		&:before,
+		&:after {
 			content: "";
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%) rotate(-45deg);
-			left: -40px;
-			width: 30px;
-			height: 15px;
-			border: 2px solid green;
-			border-top-color: transparent;
-			border-right-color: transparent;
+			left: -31px;
+			transition: .3s border-color;
 		}
-	}
+
+		&:before {
+			border-bottom: 10px solid transparent;
+			border-left: 20px solid blue;		
+		}
+
+		&:after {
+			border-top: 10px solid transparent;
+			border-left: 20px solid yellow;
+			transform: translateY(-100%);
+		}
+
+		&:hover {
+
+			&:before {	
+				border-left-color: yellow;
+			}
+
+			&:after {
+				border-left-color: blue;
+			}
+		}
+	}	
 }
 
+.bordered {
+	border: 30px solid;
+	border-color: transparent red transparent blue;
+}
