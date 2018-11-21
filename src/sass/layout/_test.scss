@@ -1,0 +1,108 @@
+$breackpoints:(
+	sm:"768px",
+	md:"1024px",
+	lg:"1200px"
+);
+$column:12;
+
+@for $i from 1 through $column {
+			.col#{$i} {
+				
+				width:100%*$i/$column;  
+			 }
+		} 
+
+@each $key, $value in $breackpoints{
+	@for $i from 1 through $column {
+			.col#{$i}#{$key} {
+				@media all and (min-width:$value){
+					width:100%*$i/$column; 
+				}
+			 }
+		} 
+	} 
+
+	
+
+.row {
+	margin: 0 -15px;
+
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+
+	}
+	
+}
+
+.col {
+	padding: 0 15px;
+	float: left;
+}
+
+.bg-holder {
+	background-color: aqua;
+}
+
+.slide {
+	position: relative;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-dots {
+	position: absolute;
+	z-index: 5;
+	bottom: 50px;
+	list-style: none;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+
+	li {
+		margin: 0 15px;
+		position: relative;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 2px solid red;
+			background-color: rgba(white, .5);
+			transition: .3s background-color;
+		}
+
+		&:hover,
+		&.slick-active {
+
+			&:before {
+				background-color: rgba(white, 1);
+			}
+		}
+	}
+
+	button {
+		display: none;
+	}
+}
