@@ -3,4 +3,6 @@ $(document).ready(function() {
 		arrows: false,
 		dots: true
 	});
+	// console.log($('#myCheckbox'));
+	// $('#myCheckbox')[0].indeterminate = true;
 })

@@ -106,3 +106,87 @@ $column:12;
 		display: none;
 	}
 }
+
+.holder p {
+	color: red;
+}
+
+.holder > p {
+	color: green;
+}
+
+.holder ~ p {
+	color: blue;
+}
+
+.holder + p {
+	color: green;
+}
+
+p:empty	{
+	border-bottom: 1px solid black;
+}
+
+[class|=hol] {
+	border: 2px solid green;
+}
+
+[title*='fra'] { 
+    background-color: yellow;
+}
+
+p:focus {
+	background-color: red;
+}
+
+input:out-of-range {
+	background-color: red;
+}
+
+input:in-range {
+	background-color: green;
+}
+
+input {
+	&::placeholder {
+		color: red;
+	}
+}
+
+
+input {
+	&:invalid {
+		box-shadow: 0 0 5px red;
+	}
+}
+
+p:nth-child(5n) {
+	background: violet;
+}
+
+
+.flex-container {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	li {
+		height: 100px;
+		background: yellow;
+		flex: 0 0 200px;
+		margin: 0 15px;
+		word-break: break-all;
+		
+		
+		&:nth-child(3n) {
+			height: 200px;
+		}
+
+		&:nth-child(5n) {
+			align-self: flex-end;
+		}
+	}
+}
