@@ -1,3 +1,58 @@
-$gray-base:              #eee;
-$link-color: #556684;
-$link-hover-color:      darken($link-color, 25%);
+$gray-base: $custom-black;
+$gray-darker: $custom-dark-gray; // #222
+$gray-dark: $custom-gray;   // #333
+// $gray: lighten($gray-base, 33.5%); // #555
+$gray-light: $custom-gray-light; // #ro
+$gray-lighter: $custom-gray-lighter; // #eee
+
+
+$brand-primary: $custom-red;
+
+$body-bg: $custom-white;
+$text-color: $gray-dark;
+
+//** Global textual link color.
+$link-color: $text-color;
+//** Link hover color set via `darken()` function.
+$link-hover-color: $brand-primary;
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+
+//////////////////////////////////////
+
+$btn-default-color:  $brand-primary;
+$btn-default-bg: transparent;
+$btn-default-border: $brand-primary;
+
+
+$btn-primary-color: $custom-white;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($btn-primary-bg, 5%);
+
+///////////////////////////////////////////////////////
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+// $navbar-inverse-color:                      lighten($gray-light, 15%) !default;
+$navbar-inverse-bg: $gray-darker;
+$navbar-inverse-border: $gray-darker;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 $custom-white;
+$navbar-inverse-link-hover-color:           $custom-white;
+$navbar-inverse-link-hover-bg:              $brand-primary;
+$navbar-inverse-link-active-color:          $custom-white;
+$navbar-inverse-link-active-bg:             $brand-primary;
+// $navbar-inverse-link-disabled-color:        #444 !default;
+// $navbar-inverse-link-disabled-bg:           transparent !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          #fff !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        #333 !default;
