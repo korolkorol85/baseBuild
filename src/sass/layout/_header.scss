@@ -1,4 +1,9 @@
 .header {
+	background-color: $gray-darker;
+
+	@media screen and (min-width: 768px) {
+		background: none;
+	}
 
 	.navbar-toggle {
 		float: left;
@@ -22,13 +27,46 @@
 		}
 	}
 
+	.navbar {
+		margin-bottom: 0;
+		border-width: 0;
+		border-radius: 0;
+		text-shadow: none;
+
+		@media screen and (min-width: 768px) {
+			margin-top: 30px;
+		}
+	}
+
 	.navbar-nav {
+
+		@media screen and (min-width: 768px) {
+			float: none;
+			text-align: center;
+		}
 
 		>li {
 
+			@media screen and (min-width: 768px) {
+				float: none;
+				display: inline-block;
+				vertical-align: top;
+			}
+
 			>a {
 				text-transform: uppercase;
+				font-size: 16px;
 			}
+		}
+	}
+
+	.navbar-collapse {
+
+		border-top: 0;
+		box-shadow: none;
+
+		@media (min-width: 992px) {
+			padding: 0;
 		}
 	}
 }
